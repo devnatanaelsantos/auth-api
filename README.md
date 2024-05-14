@@ -24,14 +24,14 @@ pip install -r requirements.txt
 
 5. Antes de iniciar o contêiner altere o caminho antes de `:/var/lib/mysql` no arquivo docker-compose.yml para uma pasta local.
 
-4. Inicie o contêiner Docker
+4. Inicie o contêiner Docker:
 ````bash
     docker-compose up -d
 ````
 
 5. Utilize a extensão MySQL do VS Code ou outro cliente MySQL para conectar-se ao banco de dados.
 
-6. No terminal, execute os comandos abaixo para criar as tabelas do banco de dados.
+6. No terminal, execute os comandos abaixo para criar as tabelas do banco de dados:
 ````bash
     flask shell
     db.create_all()
