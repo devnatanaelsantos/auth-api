@@ -10,7 +10,7 @@ API de autenticação em Flask com MySQL via Docker, gerênciamento de perfil de
 - bcrypt
 
  ## Como executar a aplicação
-1. Certifique-se de ter o Python e o Docker instalados corretamente em sua máquina.
+1. Certifique-se de ter o Python e o Docker instalados.
 
 2. Clone este repositório:
 ````bash
@@ -26,22 +26,22 @@ pip install -r requirements.txt
 
 4. Inicie o contêiner Docker:
 ````bash
-    docker-compose up -d
+docker-compose up -d
 ````
 
 5. Utilize a extensão MySQL do VS Code ou outro cliente MySQL para conectar-se ao banco de dados.
 
 6. No terminal, execute os comandos abaixo para criar as tabelas do banco de dados:
 ````bash
-    flask shell
-    db.create_all()
-    db.session.commit()
-    exit()
+flask shell
+db.create_all()
+db.session.commit()
+exit()
 ````
 
 7. Inicie a aplicação:
 ````bash
-    python app.py
+python app.py
 ````
 
 ## Endpoints
