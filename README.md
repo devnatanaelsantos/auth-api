@@ -9,7 +9,7 @@ API de autenticação em Flask com MySQL via Docker, gerênciamento de perfil de
 - Docker
 - bcrypt
 
- ## Como executar a aplicação
+ ## Executando a aplicação
 1. Certifique-se de ter o Python e o Docker instalados.
 
 2. Clone este repositório:
@@ -64,7 +64,7 @@ Retorno esperado:
     "message": "Usuário cadastrado com sucesso"
 }
 ````
-### Autenticar usuário
+### Autenticar
 
 Método: POST
 
