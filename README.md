@@ -94,13 +94,12 @@ URL: http://127.0.0.1:5000/user/{id}
 Retorno esperado:
 ````json
 {
-    "username": "Natanael"
+    "username": "User"
 }
 ````
-
-Oberservação: Somente usuário com perfil admin podem atualizar a senha e deletar outros usuários, para alterar o perfil de um usuário acesse o registro do usuário no banco de dados e altere o valor do campo 'role' para admin'.
-
 ### Atualizar senha
+
+**Oberservação:** Apenas usuários com o perfil de ``admin`` têm permissão para atualizar senhas e excluir cadastros de outros usuários. Para modificar o perfil de um usuário, acesse o registro correspondente no banco de dados e altere o valor do campo ``role``, que por padrão está definido como ``user``, para ``admin``.
 
 Método: PUT
 
@@ -128,7 +127,7 @@ URL: http://127.0.0.1:5000/user/{id}
 Retorno esperado:
 ````json
 {
-    "message": "Usuário 9 deletado com sucesso"
+    "message": "Usuário 2 deletado com sucesso"
 }
 ````
 ### Logout
