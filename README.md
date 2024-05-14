@@ -54,7 +54,7 @@ Corpo da Requisição (JSON):
 
 ````json
 {
-    "username": "Natanael",
+    "username": "User",
     "password": "123"
 }
 ````
