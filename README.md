@@ -1,5 +1,5 @@
 # Flask Auth API
-API de autenticação em Flask com Flask-SQLAlchemy, MySQL, gerênciamento de perfil de usuário e criptografia de senha com bcrypt.
+API de autenticação em Flask com Flask-SQLAlchemy, MySQL, gerenciamento de perfil de usuário e criptografia de senha com bcrypt.
 
  ## Tecnologias Utilizadas
 - Flask
