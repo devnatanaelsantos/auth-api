@@ -6,7 +6,7 @@ import bcrypt
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "your_secret_key"
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:admin123@127.0.0.1:3306/flask-crud"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:admin123@127.0.0.1:3307/data-base"
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -62,15 +62,29 @@ def create_user():
     
     return jsonify({"message": "Dados inválidos"}), 400
 
-@app.route('/user/<int:id_user>', methods=['GET'])
+@app.route('/users', methods=['GET'])
 @login_required
-def get_user(id_user):
-    user = User.query.get(id_user)
+def get_users():
 
-    if user:
-         return {"username": user.username}
-    
-    return jsonify({"message": "Usuário não encontrado"}), 404
+     if current_user.role != 'admin':
+          return jsonify ({"message": "Operação não permitida"}), 403
+
+     users = User.query.all()
+     users_list = []
+
+     for user in users:
+          users_list.append({
+               "id": user.id,
+               "username": user.username,
+               "role": user.role
+          })
+     
+     output = {
+          "usuários": users_list,
+          "total_usuários": len(users_list)
+     }
+
+     return jsonify(output)
 
 @app.route('/user/<int:id_user>', methods=['PUT'])
 @login_required
