@@ -1,5 +1,5 @@
 # Flask Auth API
-API de autenticação em Flask com MySQL via Docker, gerênciamento de perfil de usuário e criptografia de senha.
+API de autenticação em Flask com Flask-Login, Flask-SQLAlchemy, MySQL, gerenciamento de perfil de usuário e criptografia de senha com bcrypt.
 
  ## Tecnologias Utilizadas
 - Flask
@@ -9,7 +9,7 @@ API de autenticação em Flask com MySQL via Docker, gerênciamento de perfil de
 - Docker
 - bcrypt
 
- ## Como executar a aplicação
+ ## Executando a aplicação
 1. Certifique-se de ter o Python e o Docker instalados.
 
 2. Clone este repositório:
@@ -22,16 +22,16 @@ git clone https://github.com/devnatanaelsantos/flask-auth-api.git
 pip install -r requirements.txt
 ````
 
-5. Antes de iniciar o contêiner altere o caminho antes de `:/var/lib/mysql` no arquivo docker-compose.yml para uma pasta local.
+4. Antes de iniciar o contêiner altere o caminho antes de `:/var/lib/mysql` no arquivo docker-compose.yml para uma pasta local.
 
-4. Inicie o contêiner Docker:
+5. Inicie o contêiner Docker:
 ````bash
 docker-compose up -d
 ````
 
-5. Utilize a extensão MySQL do VS Code ou outro cliente MySQL para conectar-se ao banco de dados.
+6. Utilize a extensão MySQL do VS Code ou outro cliente MySQL para conectar-se ao banco de dados.
 
-6. No terminal, execute os comandos abaixo para criar as tabelas do banco de dados:
+7. No terminal, execute os comandos abaixo para criar as tabelas do banco de dados:
 ````bash
 flask shell
 db.create_all()
@@ -39,7 +39,7 @@ db.session.commit()
 exit()
 ````
 
-7. Inicie a aplicação:
+8. Inicie a aplicação:
 ````bash
 python app.py
 ````
@@ -64,7 +64,7 @@ Retorno esperado:
     "message": "Usuário cadastrado com sucesso"
 }
 ````
-### Autenticar usuário
+### Autenticar
 
 Método: POST
 
