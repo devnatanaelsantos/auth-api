@@ -1,5 +1,12 @@
 # Flask Auth API
-API de autenticação em Flask com Flask-Login, Flask-SQLAlchemy, MySQL, gerenciamento de perfil de usuário e criptografia de senha com bcrypt.
+API de autenticação com Flask, Flask-Login, Flask-SQLAlchemy, MySQL, gerenciamento de perfil de usuário e criptografia de senha com bcrypt.
+
+Funcionalidades:
+- Cadastrar usuário com criptografia de senha. 
+- Realizar login e logout.
+- Buscar todos usuários cadastrados. 
+- Atualizar senha. 
+- Deletar usuários.
 
  ## Tecnologias Utilizadas
 - Flask
@@ -64,7 +71,7 @@ Retorno esperado:
     "message": "Usuário cadastrado com sucesso"
 }
 ````
-### Autenticar
+### Login
 
 Método: POST
 
@@ -85,7 +92,9 @@ Retorno esperado:
 }
 ````
 
-### Buscar usuário por ID
+**Oberservação:** Apenas usuários com o perfil de ``admin`` têm permissão para consultar todos usuários cadastrados, atualizar senhas e excluir cadastros de outros usuários. Para modificar o perfil de um usuário, acesse o registro correspondente no banco de dados e altere o valor do campo ``role``, que por padrão está definido como ``user``, para ``admin``.
+
+### Buscar todos usuários cadastrados
 
 Método: GET
 
@@ -98,8 +107,6 @@ Retorno esperado:
 }
 ````
 ### Atualizar senha
-
-**Oberservação:** Apenas usuários com o perfil de ``admin`` têm permissão para atualizar senhas e excluir cadastros de outros usuários. Para modificar o perfil de um usuário, acesse o registro correspondente no banco de dados e altere o valor do campo ``role``, que por padrão está definido como ``user``, para ``admin``.
 
 Método: PUT
 
