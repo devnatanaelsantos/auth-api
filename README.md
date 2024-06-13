@@ -1,5 +1,5 @@
 # Flask Auth API
-API de autenticação com gerenciamento de cadastro e de perfil de usuários, e criptografia de senhas.
+API de autenticação com gerenciamento de cadastro e de perfil de usuário, e criptografia de senha.
 
 Funcionalidades:
 - Cadastro de usuários com criptografia de senha.
