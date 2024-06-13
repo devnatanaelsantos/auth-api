@@ -1,14 +1,14 @@
 # Flask Auth API
-API de autenticação com Flask, Flask-Login, SQLAlchemy, MySQL, gerenciamento de perfil de usuário e criptografia de senha com bcrypt.
+API de autenticação com gerenciamento de cadastro e e de perfil de usuários, e criptografia de senhas.
 
 Funcionalidades:
-- Cadastrar usuário com criptografia de senha. 
-- Realizar login e logout.
-- Buscar todos usuários cadastrados. 
-- Atualizar senha. 
+- Cadastro de usuários com criptografia de senha.
+- Sistema de aitenticação.
+- Buscar todos os usuários cadastrados.
+- Atualizar senha.
 - Deletar usuários.
 
- ## Tecnologias Utilizadas
+ ## Tecnologias utilizadas
 - Flask
 - Flask-Login
 - bcrypt
