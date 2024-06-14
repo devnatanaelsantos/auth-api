@@ -3,7 +3,7 @@ API de autenticação com gerenciamento de cadastro e de perfil de usuário, e c
 
 Funcionalidades:
 - Cadastro de usuários com criptografia de senha.
-- Sistema de aitenticação.
+- Sistema de autenticação.
 - Buscar todos os usuários cadastrados.
 - Atualizar senha.
 - Deletar usuários.
